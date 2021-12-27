@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6F0F9827782A5000E2D690 /* GANModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F0F9727782A5000E2D690 /* GANModel.mlmodel */; };
+		0E6F0F9C27786A0100E2D690 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F0F9B27786A0100E2D690 /* ImageExtension.swift */; };
+		0E6F0F9E2779833900E2D690 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F0F9D2779833900E2D690 /* Configs.swift */; };
 		0EFFC2C327755255002E5BD9 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC2C227755255002E5BD9 /* Tests_iOS.swift */; };
 		0EFFC2C527755255002E5BD9 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC2C427755255002E5BD9 /* Tests_iOSLaunchTests.swift */; };
 		0EFFC2CF27755255002E5BD9 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC2CE27755255002E5BD9 /* Tests_macOS.swift */; };
@@ -17,6 +20,7 @@
 		0EFFC2D527755255002E5BD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC2AB27755253002E5BD9 /* ContentView.swift */; };
 		0EFFC2D627755255002E5BD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFFC2AC27755255002E5BD9 /* Assets.xcassets */; };
 		0EFFC2D727755255002E5BD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFFC2AC27755255002E5BD9 /* Assets.xcassets */; };
+		0EFFC2EA277609F8002E5BD9 /* MLProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFFC2E9277609F8002E5BD9 /* MLProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E6F0F9727782A5000E2D690 /* GANModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GANModel.mlmodel; path = ../../../../../Downloads/GANModel.mlmodel; sourceTree = "<group>"; };
+		0E6F0F9B27786A0100E2D690 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		0E6F0F9D2779833900E2D690 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		0EFFC2AA27755253002E5BD9 /* TryCoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryCoreMLApp.swift; sourceTree = "<group>"; };
 		0EFFC2AB27755253002E5BD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0EFFC2AC27755255002E5BD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		0EFFC2CA27755255002E5BD9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFFC2CE27755255002E5BD9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		0EFFC2D027755255002E5BD9 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		0EFFC2E9277609F8002E5BD9 /* MLProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLProcess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,12 @@
 		0EFFC2A927755253002E5BD9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0EFFC2E627755D30002E5BD9 /* MLModel */,
 				0EFFC2AA27755253002E5BD9 /* TryCoreMLApp.swift */,
 				0EFFC2AB27755253002E5BD9 /* ContentView.swift */,
+				0E6F0F9D2779833900E2D690 /* Configs.swift */,
+				0EFFC2E9277609F8002E5BD9 /* MLProcess.swift */,
+				0E6F0F9B27786A0100E2D690 /* ImageExtension.swift */,
 				0EFFC2AC27755255002E5BD9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -139,6 +151,14 @@
 				0EFFC2D027755255002E5BD9 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		0EFFC2E627755D30002E5BD9 /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F0F9727782A5000E2D690 /* GANModel.mlmodel */,
+			);
+			path = MLModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6F0F9C27786A0100E2D690 /* ImageExtension.swift in Sources */,
 				0EFFC2D427755255002E5BD9 /* ContentView.swift in Sources */,
+				0EFFC2EA277609F8002E5BD9 /* MLProcess.swift in Sources */,
 				0EFFC2D227755255002E5BD9 /* TryCoreMLApp.swift in Sources */,
+				0E6F0F9827782A5000E2D690 /* GANModel.mlmodel in Sources */,
+				0E6F0F9E2779833900E2D690 /* Configs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B4U63C2622;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -494,6 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B4U63C2622;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
